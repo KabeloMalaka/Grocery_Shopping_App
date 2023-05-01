@@ -1,0 +1,73 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title slot="start">
+      Home
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear"><ion-icon name="person-outline"></ion-icon></ion-button>
+      <ion-button fill="clear"><ion-icon name="cart-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item class="head-item ion-no-margin" lines="none">
+    <ion-thumbnail class="logo" slot="start">
+      <img alt="Silhouette of a person's head" src="../../../../assets/images/logo.png" />
+    </ion-thumbnail>
+    <ion-label slot="end" class="content-title ion-no-margin ion-no-padding">Get your groceries delivered to you!</ion-label>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-searchbar class="search-box ion-no-margin" animated="true" placeholder="Search for Item"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="shop-background">
+    <ion-row>
+      <ng-container *ngFor="let item of items; let i = index;">
+        <ion-col size="6" *ngIf="i % 2 === 0">
+          <ion-card>
+            <ion-fab vertical="top" horizontal="end">
+              <ion-fab-button size="small" class="fav-button ion-no-margin">
+                <ion-icon name="heart-outline"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+            <img alt="" src="../../../assets/images/groceries/{{item}}.png" />
+            <ion-card-header>
+              <ion-card-title>{{item}}</ion-card-title>
+              <ion-card-subtitle>R 29.99</ion-card-subtitle>
+            </ion-card-header>
+            <ion-fab vertical="bottom" horizontal="end">
+              <ion-fab-button size="small" class="add-button ion-no-margin">
+                <ion-icon name="add-outline"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" *ngIf="i % 2 === 1">
+          <ion-card>
+            <ion-fab vertical="top" horizontal="end">
+              <ion-fab-button size="small" class="fav-button ion-no-margin">
+                <ion-icon name="heart-outline"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+            <img alt="" src="../../../assets/images/groceries/{{item}}.png" />
+            <ion-card-header>
+              <ion-card-title>{{item}}</ion-card-title>
+              <ion-card-subtitle>R 49.99</ion-card-subtitle>
+            </ion-card-header>
+            <ion-fab vertical="bottom" horizontal="end">
+              <ion-fab-button size="small" class="add-button ion-no-margin">
+                <ion-icon name="add-outline"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+          </ion-card>
+        </ion-col>
+      </ng-container>
+    </ion-row>
+  </div>
+</ion-content>

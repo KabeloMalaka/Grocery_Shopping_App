@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+  <ion-avatar class="logo">
+    <img alt="Silhouette of a person's head" src="../../../../assets/images/logo.png" />
+  </ion-avatar>
+  <ion-title class="content-title">Sign Up</ion-title>
+
+  <form [formGroup]="signUpForm">
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter name" type="text" formControlName="name" shape="round"
+        label="Name"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter email" type="email" formControlName="email" shape="round"
+        label="Email"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter password" type="password" formControlName="password" shape="round"
+        label="Password"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Confirm password" type="password" formControlName="confirmPassword" shape="round"
+        label="Confirm password"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" [disabled]="signUpForm.invalid" shape="round" fill="solid">Sign Up</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-label class="center">Already have an account? <a href="/login">Login</a></ion-label>
+    </ion-row>
+  </form>
+</ion-content>

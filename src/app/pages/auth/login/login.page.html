@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-avatar class="logo">
+    <img alt="Silhouette of a person's head" src="../../../../assets/images/logo.png" />
+  </ion-avatar>
+  <ion-title class="content-title">Grocery Shopping App</ion-title>
+
+  <form [formGroup]="loginForm">
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter email" type="email" formControlName="email" shape="round"
+        label="Email"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter password" type="password" formControlName="password" shape="round"
+        label="Password"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" [disabled]="loginForm.invalid" shape="round" fill="solid">Login</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-label class="center">Don't have an account? <a href="/sign-up">Sign up</a></ion-label>
+    </ion-row>
+  </form>
+</ion-content>

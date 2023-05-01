@@ -1,0 +1,64 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title slot="start">
+      Cart
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear"><ion-icon name="person-outline"></ion-icon></ion-button>
+      <ion-button fill="clear"><ion-icon name="cart-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-title>Checkout List</ion-title>
+    <ion-item *ngFor="let item of items; let i = index;" class="cart-item" lines="none">
+      <ion-img alt="" src="../../../assets/images/groceries/{{item}}.png"></ion-img>
+      <ion-label>
+        <h2>{{item}}</h2>
+        <p>R49.99</p>
+      </ion-label>
+      <ion-item slot="end" lines="none" class="buttons-item">
+        <ion-icon class="gauge-button" name="remove-circle-outline"></ion-icon>
+        <ion-label>1</ion-label>
+        <ion-icon class="gauge-button" name="add-circle-outline"></ion-icon>
+        <ion-icon class="remove-button" name="trash-outline"></ion-icon>
+      </ion-item>
+    </ion-item>
+    <ion-item class="total" lines="none">
+      <ion-label slot="start">Total</ion-label>
+      <ion-label slot="end">R 100</ion-label>
+    </ion-item>
+    <ion-item class="deliver" lines="none">
+      <ion-label slot="start">Deliver to</ion-label>
+      <a slot="end">Change</a>
+    </ion-item>
+    <ion-list class="address">
+      <strong>Street number</strong>
+      <p>Pretoria, South Africa</p>
+      <p>0001</p>
+    </ion-list>
+    <ion-item class="total" lines="none">
+      <ion-label slot="start">Delivery fee</ion-label>
+      <ion-label slot="end">R 0</ion-label>
+    </ion-item>
+    <ion-item class="deliver" lines="none">
+      <ion-label slot="start">Payment details</ion-label>
+      <a slot="end">Change</a>
+    </ion-item>
+    <ion-list class="address">
+      <strong>Visa</strong>
+      <p>Bank: FNB</p>
+      <p>Card number: 292898437730</p>
+    </ion-list>
+    <ion-item class="total" lines="none">
+      <ion-label slot="start">Total payment</ion-label>
+      <ion-label slot="end">R 100</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-button type="submit" shape="round" fill="solid" expand="full">Checkout</ion-button>
+</ion-footer>

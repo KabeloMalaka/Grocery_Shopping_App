@@ -1,0 +1,49 @@
+ion-title {
+  // color: var(--ion-color-primary-shade);
+}
+
+ion-footer {
+  text-align: center;
+  background: #fff;
+  padding: 0 20px;
+}
+
+.cart-item {
+  min-height: 85px;
+  margin: 5px 0;
+
+  ion-img {
+    width: 60px;
+    height: auto;
+    margin-right: 5px;
+  }
+
+  .buttons-item {
+    ion-label  {
+      margin: 0 3px;
+    }
+
+    .gauge-button {
+      color: green;
+    }
+
+    .remove-button {
+      margin-left: 30px;
+      color: var(--ion-color-primary-shade);
+    }
+  }
+}
+
+.total {
+  font-weight: bold;
+  border-bottom: var(--ion-color-primary-shade) solid 1px;
+}
+
+.address {
+  text-align: start;
+  padding: 0 30px;
+
+  p {
+    margin: 5px 0;
+  }
+}
