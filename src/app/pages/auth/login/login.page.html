@@ -12,7 +12,7 @@
   </ion-avatar>
   <ion-title class="content-title">Grocery Shopping App</ion-title>
 
-  <form [formGroup]="loginForm">
+  <form id="loginForm" [formGroup]="loginForm">
     <ion-row>
       <ion-col>
         <ion-input fill="outline" label-placement="floating" placeholder="Enter email" type="email" formControlName="email" shape="round"
@@ -27,7 +27,9 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" [disabled]="loginForm.invalid" shape="round" fill="solid">Login</ion-button>
+        <ion-button form="loginForm" type="submit" [disabled]="loginForm.invalid" shape="round" fill="solid" (click)="signIn()">
+          Login
+        </ion-button>
       </ion-col>
     </ion-row>
     <ion-row>

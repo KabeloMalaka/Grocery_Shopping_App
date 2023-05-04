@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title slot="start">
+      My Orders
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear"><ion-icon name="person-outline"></ion-icon></ion-button>
+      <ion-button fill="clear"><ion-icon name="cart-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list class="content-list">
+    <ion-title class="content-title">Order List</ion-title>
+    <ion-item *ngFor="let item of items; let i = index;" class="order-item" lines="none">
+      <ion-img src="../../../assets/images/delivery-guy.png"></ion-img>
+      <ion-list>
+        <strong>{{item}}</strong>
+        <p>R200</p>
+        <p>21-04-2023</p>
+      </ion-list>
+      <div class="status" slot="end">
+        delivered
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

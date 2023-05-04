@@ -4,11 +4,18 @@
   </ion-avatar>
   <ion-title class="content-title">Sign Up</ion-title>
 
-  <form [formGroup]="signUpForm">
+  <form id="signUpForm" [formGroup]="signUpForm">
+    <!-- User Info -->
     <ion-row>
       <ion-col>
-        <ion-input fill="outline" label-placement="floating" placeholder="Enter name" type="text" formControlName="name" shape="round"
-        label="Name"></ion-input>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter first name" type="text" formControlName="firstName" shape="round"
+        label="First Name"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter last name" type="text" formControlName="lastName" shape="round"
+        label="Last Name"></ion-input>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -23,19 +30,67 @@
         label="Password"></ion-input>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-input fill="outline" label-placement="floating" placeholder="Confirm password" type="password" formControlName="confirmPassword" shape="round"
-        label="Confirm password"></ion-input>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" [disabled]="signUpForm.invalid" shape="round" fill="solid">Sign Up</ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-label class="center">Already have an account? <a href="/login">Login</a></ion-label>
-    </ion-row>
+    <!-- Shipping Address -->
+    <ion-title>Shipping Address</ion-title>
+    <div [formGroup]="shippingAddress">
+      <ion-row>
+        <ion-col>
+          <ion-input fill="outline" label-placement="floating" placeholder="Enter street" type="text" formControlName="street" shape="round"
+          label="Street"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input fill="outline" label-placement="floating" placeholder="Enter city" type="text" formControlName="city" shape="round"
+          label="City"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input fill="outline" label-placement="floating" placeholder="Enter province" type="text" formControlName="province" shape="round"
+          label="Province"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input fill="outline" label-placement="floating" placeholder="Enter zip code" type="text" formControlName="zipCode" shape="round"
+          label="Zip Code"></ion-input>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- Billing Address -->
+    <ion-title>Billing Address</ion-title>
+    <div [formGroup]="billingAddress">
+      <ion-row>
+        <ion-col>
+          <ion-input fill="outline" label-placement="floating" placeholder="Enter street" type="text" formControlName="street" shape="round"
+          label="Street"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input fill="outline" label-placement="floating" placeholder="Enter city" type="text" formControlName="city" shape="round"
+          label="City"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input fill="outline" label-placement="floating" placeholder="Enter province" type="text" formControlName="province" shape="round"
+          label="Province"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input fill="outline" label-placement="floating" placeholder="Enter zip code" type="text" formControlName="zipCode" shape="round"
+          label="Zip Code"></ion-input>
+        </ion-col>
+      </ion-row>
+    </div>
   </form>
 </ion-content>
+
+<ion-footer>
+  <ion-button form="signUpForm" type="submit" [disabled]="signUpForm.invalid" shape="round" fill="solid" (click)="signUp()">
+    Sign UP
+  </ion-button>
+</ion-footer>

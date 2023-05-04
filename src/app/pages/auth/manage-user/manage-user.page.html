@@ -1,0 +1,90 @@
+<ion-content [fullscreen]="true">
+  <ion-avatar class="logo">
+    <img alt="Silhouette of a person's head" src="../../../../assets/images/logo.png" />
+  </ion-avatar>
+  <ion-title class="content-title">Manage User</ion-title>
+
+  <form id="signUpForm" [formGroup]="signUpForm">
+    <!-- User Info -->
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter first name" type="text" formControlName="firstName" shape="round"
+        label="First Name"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter last name" type="text" formControlName="lastName" shape="round"
+        label="Last Name"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter email" type="email" formControlName="email" shape="round"
+        label="Email"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter password" type="password" formControlName="password" shape="round"
+        label="Password"></ion-input>
+      </ion-col>
+    </ion-row>
+    <!-- Shipping Address -->
+    <ion-title>Shipping Address</ion-title>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter street" type="text" formControlName="street" shape="round"
+        label="Street"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter city" type="text" formControlName="City" shape="round"
+        label="City"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter province" type="text" formControlName="province" shape="round"
+        label="Province"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter zip code" type="text" formControlName="zipCode" shape="round"
+        label="Zip Code"></ion-input>
+      </ion-col>
+    </ion-row>
+    <!-- Billing Address -->
+    <ion-title>Billing Address</ion-title>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter street" type="text" formControlName="street" shape="round"
+        label="Street"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter city" type="text" formControlName="City" shape="round"
+        label="City"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter province" type="text" formControlName="province" shape="round"
+        label="Province"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input fill="outline" label-placement="floating" placeholder="Enter zip code" type="text" formControlName="zipCode" shape="round"
+        label="Zip Code"></ion-input>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-button form="signUpForm" type="submit" [disabled]="signUpForm.invalid" shape="round" fill="solid">Save and Continue</ion-button>
+</ion-footer>

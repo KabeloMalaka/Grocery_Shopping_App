@@ -55,6 +55,12 @@ ion-input {
   --border-color: var(--ion-color-primary) !important;
 }
 
+.content-list {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
 .content-title {
   font-size: 24px;
   font-weight: bold;

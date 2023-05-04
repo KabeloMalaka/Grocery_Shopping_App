@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title slot="start">
-      Cart
+      My Cart
     </ion-title>
     <ion-buttons slot="end">
       <ion-button fill="clear"><ion-icon name="person-outline"></ion-icon></ion-button>
@@ -11,8 +11,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-title>Checkout List</ion-title>
+  <ion-list class="content-list">
+    <ion-title class="content-title">Checkout List</ion-title>
     <ion-item *ngFor="let item of items; let i = index;" class="cart-item" lines="none">
       <ion-img alt="" src="../../../assets/images/groceries/{{item}}.png"></ion-img>
       <ion-label>
